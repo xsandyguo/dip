@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="precompile">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{35b45047-7a91-4398-9bde-9ef52d07c86a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="runtime">
+      <UniqueIdentifier>{fb37ee53-9f6c-46e8-9b6b-d07d5b7c9b25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\runtime">
+      <UniqueIdentifier>{defce72d-cf8a-4df3-af53-1f8da3a3769b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\base">
+      <UniqueIdentifier>{822c9967-9e13-48d5-8d63-14e7dcc5496a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{bda95908-717e-4ea3-9ce4-c8722a8a9366}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="precompile\precompile.h">
+      <Filter>precompile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\capture_source.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\class.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\class_info.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\common.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\enumerator.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\image_data.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\image_format.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\method.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\property.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\set_get.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\thread.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\timestamp.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\variant_data.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\version.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="runtime\resource.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base\auto_any.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base\basictypes.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base\debug.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base\scoped_any.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base\scoped_ptr.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base\shared_any.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base\shared_ptr.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="runtime\targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base\error.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="runtime\thread_pool_callback.h">
+      <Filter>runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="runtime\thread_pool.h">
+      <Filter>runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\object.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\filter.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\mapper.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\process.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\source.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\image_window.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\connector.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\presentation.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\framework.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\synchronized.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\type_descriptor.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\vm.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\message_thread.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\plain_thread.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\end_point.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base\smart_any_fwd.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\reflector.h">
+      <Filter>include\runtime</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="runtime\capture_source.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\class.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\enumerator.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\image_data.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\object.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\thread.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\timestamp.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\variant_data.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="precompile\precompile.cc">
+      <Filter>precompile</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\image_window.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="base\shared_any.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\debug.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\thread_pool.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\get_set.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\filter.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\mapper.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\process.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\source.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\presentation.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\synchronized.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\method.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\type_descriptor.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\main.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\vm.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\message_thread.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\plain_thread.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\end_point.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\reflector.cc">
+      <Filter>runtime</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="runtime\runtime_res.rc">
+      <Filter>res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

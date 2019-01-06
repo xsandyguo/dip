@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{79F5AB1E-C4B5-4BFA-9039-D40192F6A714}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>OcvFilter</RootNamespace>
+    <ProjectName>filter</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\plugin_common.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\plugin_common.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)\runtime\include;$(ProjectDir)\third_party\OpenCV\include;$(ProjectDir)\third_party\DirectShow\Include;$(ProjectDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\third_party\OpenCV\lib;$(ProjectDir)\thrid_pary\DirectShow\lib\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)\runtime\include;$(ProjectDir)\third_party\OpenCV\include;$(ProjectDir)\third_party\DirectShow\Include;$(ProjectDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\third_party\OpenCV\lib;$(ProjectDir)\thrid_pary\DirectShow\lib\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;DIP_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_core244d.lib;opencv_highgui244d.lib;opencv_imgproc244d.lib;opencv_objdetect244d.lib;opencv_video244d.lib;strmiids.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;OCVFILTER_EXPORTS;DIP_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opencv_core244.lib;opencv_highgui244.lib;opencv_imgproc244.lib;opencv_objdetect244.lib;opencv_video244.lib;strmiids.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="common\common.h" />
+    <ClInclude Include="common\ocv_image.h" />
+    <ClInclude Include="filter\avi_reader.h" />
+    <ClInclude Include="filter\face_detect.h" />
+    <ClInclude Include="filter\dxshow_capture.h" />
+    <ClInclude Include="filter\camera_capture.h" />
+    <ClInclude Include="filter\edge_detect.h" />
+    <ClInclude Include="filter\file_reader.h" />
+    <ClInclude Include="filter\file_writer.h" />
+    <ClInclude Include="filter\hsv_space.h" />
+    <ClInclude Include="filter\invert_image.h" />
+    <ClInclude Include="filter\ocvfilter.h" />
+    <ClInclude Include="filter\ocv_window.h" />
+    <ClInclude Include="filter\rgb2gray.h" />
+    <ClInclude Include="filter\motion_detect.h" />
+    <ClInclude Include="precompile\precompile.h" />
+    <ClInclude Include="common\resource.h" />
+    <ClInclude Include="common\targetver.h" />
+    <ClInclude Include="filter\video_capture.h" />
+    <ClInclude Include="filter\signal_duplicator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common\ocv_image.cpp" />
+    <ClCompile Include="filter\avi_reader.cpp" />
+    <ClCompile Include="filter\face_detect.cpp" />
+    <ClCompile Include="filter\video_capture.cc" />
+    <ClCompile Include="filter\signal_duplicator.cpp" />
+    <ClInclude Include="common\scoped_ocv.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClCompile Include="filter\dxshow_capture.cc" />
+    <ClCompile Include="filter\camera_capture.cc" />
+    <ClCompile Include="filter\edge_detect.cpp" />
+    <ClCompile Include="filter\file_reader.cc" />
+    <ClCompile Include="filter\file_writer.cc" />
+    <ClCompile Include="filter\hsv_space.cc" />
+    <ClCompile Include="filter\invert_image.cc" />
+    <ClCompile Include="filter\ocvfilter.cc" />
+    <ClCompile Include="filter\ocv_window.cc" />
+    <ClCompile Include="filter\rgb2gray.cc" />
+    <ClCompile Include="main\main.cc" />
+    <ClCompile Include="filter\motion_detect.cpp" />
+    <ClCompile Include="precompile\precompile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="common\res.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\runtime\runtime.vcxproj">
+      <Project>{4c364ad4-bcf5-4df2-a88c-dd2bbeb01784}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\haarcascade_frontalface_alt.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

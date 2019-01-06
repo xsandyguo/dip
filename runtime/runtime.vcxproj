@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4C364AD4-BCF5-4DF2-A88C-DD2BBEB01784}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DIPBase</RootNamespace>
+    <ProjectName>runtime</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\common.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\common.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)precompile;$(ProjectDir)include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;DIP_BUILD_DLL;TINYXML_DLL_BUILD;TIXML_USE_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;DIP_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\base\smart_any_fwd.h" />
+    <ClInclude Include="include\runtime\end_point.h" />
+    <ClInclude Include="include\runtime\connector.h" />
+    <ClInclude Include="include\runtime\plain_thread.h" />
+    <ClInclude Include="include\runtime\vm.h" />
+    <ClInclude Include="include\base\auto_any.h" />
+    <ClInclude Include="include\base\basictypes.h" />
+    <ClInclude Include="include\base\debug.h" />
+    <ClInclude Include="include\base\error.h" />
+    <ClInclude Include="include\runtime\framework.h" />
+    <ClInclude Include="include\runtime\presentation.h" />
+    <ClInclude Include="include\runtime\process.h" />
+    <ClInclude Include="include\runtime\object.h" />
+    <ClInclude Include="include\base\scoped_any.h" />
+    <ClInclude Include="include\base\scoped_ptr.h" />
+    <ClInclude Include="include\base\shared_any.h" />
+    <ClInclude Include="include\base\shared_ptr.h" />
+    <ClInclude Include="include\runtime\type_descriptor.h" />
+    <ClInclude Include="runtime\thread_pool.h" />
+    <ClInclude Include="runtime\thread_pool_callback.h" />
+    <ClInclude Include="include\runtime\image_window.h" />
+    <ClInclude Include="include\runtime\capture_source.h" />
+    <ClInclude Include="include\runtime\class.h" />
+    <ClInclude Include="include\runtime\class_info.h" />
+    <ClInclude Include="include\runtime\reflector.h" />
+    <ClInclude Include="include\runtime\enumerator.h" />
+    <ClInclude Include="include\runtime\image_data.h" />
+    <ClInclude Include="include\runtime\filter.h" />
+    <ClInclude Include="include\runtime\mapper.h" />
+    <ClInclude Include="include\runtime\source.h" />
+    <ClInclude Include="include\runtime\method.h" />
+    <ClInclude Include="include\runtime\synchronized.h" />
+    <ClInclude Include="include\runtime\common.h" />
+    <ClInclude Include="include\runtime\property.h" />
+    <ClInclude Include="include\runtime\set_get.h" />
+    <ClInclude Include="include\runtime\thread.h" />
+    <ClInclude Include="include\runtime\timestamp.h" />
+    <ClInclude Include="include\runtime\variant_data.h" />
+    <ClInclude Include="include\runtime\image_format.h" />
+    <ClInclude Include="include\runtime\version.h" />
+    <ClInclude Include="include\runtime\message_thread.h" />
+    <ClInclude Include="runtime\resource.h" />
+    <ClInclude Include="precompile\precompile.h" />
+    <ClInclude Include="runtime\targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="base\debug.cc" />
+    <ClCompile Include="base\shared_any.cc" />
+    <ClCompile Include="runtime\end_point.cc" />
+    <ClCompile Include="runtime\plain_thread.cc" />
+    <ClCompile Include="runtime\vm.cc" />
+    <ClCompile Include="runtime\get_set.cc" />
+    <ClCompile Include="runtime\main.cc" />
+    <ClCompile Include="runtime\method.cc" />
+    <ClCompile Include="runtime\presentation.cc" />
+    <ClCompile Include="runtime\thread_pool.cc" />
+    <ClCompile Include="runtime\process.cc" />
+    <ClCompile Include="runtime\image_window.cc" />
+    <ClCompile Include="runtime\capture_source.cc" />
+    <ClCompile Include="runtime\class.cc" />
+    <ClCompile Include="runtime\reflector.cc" />
+    <ClCompile Include="runtime\enumerator.cc" />
+    <ClCompile Include="runtime\image_data.cc" />
+    <ClCompile Include="runtime\filter.cc" />
+    <ClCompile Include="runtime\mapper.cc" />
+    <ClCompile Include="runtime\source.cc" />
+    <ClCompile Include="runtime\synchronized.cc" />
+    <ClCompile Include="runtime\object.cc" />
+    <ClCompile Include="runtime\thread.cc" />
+    <ClCompile Include="runtime\timestamp.cc" />
+    <ClCompile Include="runtime\type_descriptor.cc" />
+    <ClCompile Include="runtime\variant_data.cc" />
+    <ClCompile Include="precompile\precompile.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="runtime\message_thread.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="runtime\runtime_res.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

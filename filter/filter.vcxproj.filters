@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="precompile">
+      <UniqueIdentifier>{0170f5b5-5f0e-419a-8646-de209e30d0c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="filter">
+      <UniqueIdentifier>{2259f769-37c3-4c0f-9dbc-7b42acf03797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{3cc66922-8ac8-423b-b0be-8a73d323dc17}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="precompile\precompile.h">
+      <Filter>precompile</Filter>
+    </ClInclude>
+    <ClInclude Include="common\targetver.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\resource.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\camera_capture.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\dxshow_capture.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\ocv_window.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ocv_image.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\invert_image.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\ocvfilter.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\rgb2gray.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\hsv_space.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\edge_detect.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="common\scoped_ocv.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\file_writer.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\file_reader.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\video_capture.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\motion_detect.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\face_detect.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\signal_duplicator.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\avi_reader.h">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="precompile\precompile.cpp">
+      <Filter>precompile</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\ocv_window.cc">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ocv_image.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\ocvfilter.cc">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\camera_capture.cc">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\rgb2gray.cc">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\dxshow_capture.cc">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\invert_image.cc">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\hsv_space.cc">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\edge_detect.cpp">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="main\main.cc">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\file_reader.cc">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\file_writer.cc">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\video_capture.cc">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\motion_detect.cpp">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\face_detect.cpp">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\signal_duplicator.cpp">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\avi_reader.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="common\res.rc">
+      <Filter>common</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\haarcascade_frontalface_alt.xml">
+      <Filter>res</Filter>
+    </None>
+  </ItemGroup>
+</Project>

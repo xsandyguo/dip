@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<design>
+    <drawing>
+        <process id="0" x="78" y="142">
+            <filter class="{4661463D-82E4-4F20-98A6-AA268AD33DF4}">
+                <property>
+                    <item key="camera index" value="0" />
+                    <item key="name" value="CameraCaputre1" />
+                </property>
+            </filter>
+            <ports>
+                <port id="1" index="0" can_start="1">
+                    <owner>
+                        <process ref="0" />
+                    </owner>
+                </port>
+            </ports>
+        </process>
+        <process id="2" x="218" y="141">
+            <filter class="{dd3f1aab-472f-4d7e-9227-cc50c665a671}">
+                <property>
+                    <item key="name" value="HsvSpace1" />
+                </property>
+            </filter>
+            <ports>
+                <port id="3" index="0" can_start="0">
+                    <owner>
+                        <process ref="2" />
+                    </owner>
+                </port>
+                <port id="4" index="0" can_start="1">
+                    <owner>
+                        <process ref="2" />
+                    </owner>
+                </port>
+                <port id="5" index="1" can_start="1">
+                    <owner>
+                        <process ref="2" />
+                    </owner>
+                </port>
+                <port id="6" index="2" can_start="1">
+                    <owner>
+                        <process ref="2" />
+                    </owner>
+                </port>
+            </ports>
+        </process>
+        <process id="7" x="377" y="188">
+            <filter class="{c69f2646-5bf6-4cb0-a382-450aed4ad346}">
+                <property>
+                    <item key="update interval" value="1000" />
+                    <item key="name" value="OcvWindow1" />
+                </property>
+            </filter>
+            <ports>
+                <port id="8" index="0" can_start="0">
+                    <owner>
+                        <process ref="7" />
+                    </owner>
+                </port>
+                <port id="9" index="0" can_start="1">
+                    <owner>
+                        <process ref="7" />
+                    </owner>
+                </port>
+            </ports>
+        </process>
+        <process id="10" x="375" y="321">
+            <filter class="{c69f2646-5bf6-4cb0-a382-450aed4ad346}">
+                <property>
+                    <item key="update interval" value="1000" />
+                    <item key="name" value="OcvWindow2" />
+                </property>
+            </filter>
+            <ports>
+                <port id="11" index="0" can_start="0">
+                    <owner>
+                        <process ref="10" />
+                    </owner>
+                </port>
+                <port id="12" index="0" can_start="1">
+                    <owner>
+                        <process ref="10" />
+                    </owner>
+                </port>
+            </ports>
+        </process>
+        <process id="13" x="381" y="58">
+            <filter class="{c69f2646-5bf6-4cb0-a382-450aed4ad346}">
+                <property>
+                    <item key="update interval" value="1000" />
+                    <item key="name" value="OcvWindow3" />
+                </property>
+            </filter>
+            <ports>
+                <port id="14" index="0" can_start="0">
+                    <owner>
+                        <process ref="13" />
+                    </owner>
+                </port>
+                <port id="15" index="0" can_start="1">
+                    <owner>
+                        <process ref="13" />
+                    </owner>
+                </port>
+            </ports>
+        </process>
+        <process id="16" x="657" y="218">
+            <filter class="{AA29A9AA-2431-4DA3-9E0C-F9FE4060CA33}">
+                <property>
+                    <item key="name" value="winthread1" />
+                </property>
+            </filter>
+            <ports>
+                <port id="17" index="0" can_start="0">
+                    <owner>
+                        <process ref="16" />
+                    </owner>
+                </port>
+                <port id="18" index="2" can_start="0">
+                    <owner>
+                        <process ref="16" />
+                    </owner>
+                </port>
+                <port id="19" index="4" can_start="0">
+                    <owner>
+                        <process ref="16" />
+                    </owner>
+                </port>
+            </ports>
+        </process>
+        <line id="20">
+            <start>
+                <port ref="1" />
+            </start>
+            <end>
+                <port ref="3" />
+            </end>
+        </line>
+        <line id="21">
+            <start>
+                <port ref="4" />
+            </start>
+            <end>
+                <port ref="14" />
+            </end>
+        </line>
+        <line id="22">
+            <start>
+                <port ref="5" />
+            </start>
+            <end>
+                <port ref="8" />
+            </end>
+        </line>
+        <line id="23">
+            <start>
+                <port ref="6" />
+            </start>
+            <end>
+                <port ref="11" />
+            </end>
+        </line>
+        <line id="24">
+            <start>
+                <port ref="12" />
+            </start>
+            <end>
+                <port ref="19" />
+            </end>
+        </line>
+        <line id="25">
+            <start>
+                <port ref="9" />
+            </start>
+            <end>
+                <port ref="18" />
+            </end>
+        </line>
+        <line id="26">
+            <start>
+                <port ref="15" />
+            </start>
+            <end>
+                <port ref="17" />
+            </end>
+        </line>
+    </drawing>
+</design>

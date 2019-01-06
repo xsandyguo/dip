@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<design>
+    <drawing>
+        <process id="0" x="110" y="140">
+            <filter class="{47BADB9C-50BF-466E-B0B4-FE4E4ACCC3F6}">
+                <property>
+                    <item key="file path" value="" />
+                    <item key="name" value="FileReader1" />
+                </property>
+            </filter>
+            <ports>
+                <port id="1" index="0" can_start="1">
+                    <owner>
+                        <process ref="0" />
+                    </owner>
+                </port>
+            </ports>
+        </process>
+        <process id="2" x="326" y="172">
+            <filter class="{c69f2646-5bf6-4cb0-a382-450aed4ad346}">
+                <property>
+                    <item key="display mode" value="image fit window" />
+                    <item key="height" value="400" />
+                    <item key="refresh rate" value="40" />
+                    <item key="width" value="300" />
+                    <item key="name" value="OcvWindow1" />
+                </property>
+            </filter>
+            <ports>
+                <port id="3" index="0" can_start="0">
+                    <owner>
+                        <process ref="2" />
+                    </owner>
+                </port>
+                <port id="4" index="0" can_start="1">
+                    <owner>
+                        <process ref="2" />
+                    </owner>
+                </port>
+            </ports>
+        </process>
+        <process id="5" x="572" y="175">
+            <filter class="{AA29A9AA-2431-4DA3-9E0C-F9FE4060CA33}">
+                <property>
+                    <item key="name" value="MessageThread1" />
+                </property>
+            </filter>
+            <ports>
+                <port id="6" index="0" can_start="0">
+                    <owner>
+                        <process ref="5" />
+                    </owner>
+                </port>
+            </ports>
+        </process>
+        <line id="7">
+            <start>
+                <port ref="1" />
+            </start>
+            <end>
+                <port ref="3" />
+            </end>
+        </line>
+        <line id="8">
+            <start>
+                <port ref="4" />
+            </start>
+            <end>
+                <port ref="6" />
+            </end>
+        </line>
+    </drawing>
+</design>

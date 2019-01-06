@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="base">
+      <UniqueIdentifier>{342c057b-4e36-4d64-81a7-4aa4be5ffaf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="precompile">
+      <UniqueIdentifier>{373299b0-1510-4e30-a78e-3993d9518245}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="app">
+      <UniqueIdentifier>{441508a7-9a9c-4d9e-8a00-2c8d62f7bd61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io">
+      <UniqueIdentifier>{2427525b-9c64-4b45-a6d0-7dd2d87a8250}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="flow">
+      <UniqueIdentifier>{5d6b0f2b-569d-4bba-ae5c-54b90df165fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="flow\ui">
+      <UniqueIdentifier>{04e8c9fa-8902-44ba-a6bb-23728d41d2f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="image">
+      <UniqueIdentifier>{cb1bfc4b-74ec-453f-89ca-e21866576fce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="image\ui">
+      <UniqueIdentifier>{2c296d6d-f681-4830-ae0a-d7d10b9e7f93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="image\common">
+      <UniqueIdentifier>{6ba46147-dfdd-4e58-90b9-de39c23342ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="flow\common">
+      <UniqueIdentifier>{f6a4cd92-202c-48bc-bbee-feb8845eb4ae}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DIP System.reg" />
+    <None Include="res\file_view.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\file_view_hc.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\class_view.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\class_view_hc.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\fileview.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\fileview_hc.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\classview.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\classview_hc.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\explorer.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\explorer_hc.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\sort.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\sort_hc.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\menuimages.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\menuimages_hc.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\output_wnd.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\output_wnd_hc.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\properties_wnd.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\properties_wnd_hc.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\properties.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\properties_hc.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\info.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\buttons.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\filelarge.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\filesmall.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\main.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\writelarge.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\writesmall.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\ribbon.mfcribbon-ms">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\DIPSystem.rc2">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\DIP SystemDoc.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\DIP System.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\Toolbar256.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\aligin.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\aligin_hc.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="Res\toolbox_wnd_hc.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\aligin_small.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\demoDoc.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\ok.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\canc.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\no1.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\r1.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\b1.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\gray.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\cxtoolbar1.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\cxtoolbar2.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\bitmap2.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\cximage.bmp">
+      <Filter>res</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="precompile\precompile.h">
+      <Filter>precompile</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\about_dialog.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\file_view.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\output_window.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\properties_window.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\toolbox_ctrl.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\toolbox_window.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\view_tree.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\child_frame.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\main_frame.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\thumbnail_view.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\command_window.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="app\app.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\widget_manager.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="io\factory.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\flow_factory.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\tixml_dom.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\io_format.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="base\observer.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\framework.h">
+      <Filter>flow\common</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\abstract_view.h">
+      <Filter>flow\common</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\abstract_connector.h">
+      <Filter>flow\common</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\abstract_figure.h">
+      <Filter>flow\common</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\abstract_handle.h">
+      <Filter>flow\common</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\abstract_tool.h">
+      <Filter>flow\common</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="io\serialize_const.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\constants.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\string.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\prefs_const.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\grid.h">
+      <Filter>flow\common</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\change_connection_end_handle.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\change_connection_handle.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\change_connection_start_handle.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\connection_tool.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\creation_tool.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\data_line.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\delegation_selection_tool.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\drag_tracker.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\drawing_container.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\handle_tracker.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\inout_port.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\node_figure.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\process_figure.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\selection_area_tracker.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\selection_tool.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\ui\flow_document.h">
+      <Filter>flow\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\ui\flow_view.h">
+      <Filter>flow\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\bezier_figure.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\abstract_connection.h">
+      <Filter>flow\common</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\line_figure.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\geometry.h">
+      <Filter>flow</Filter>
+    </ClInclude>
+    <ClInclude Include="flow\ui\auto_layout.h">
+      <Filter>flow\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="app\edit_manager.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgFloodFill.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgGamma.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgHisto.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgIncBpp.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgJpeg.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgMix.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgOpacity.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgOptions.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgPalette.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgRepair.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgResample.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgRotate.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgShadow.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgSkew.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgText.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgThreshold.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\dlgcapture.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgColorize.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgCombine.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgCustomFilter.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgDataExt.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgDecBpp.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgDither.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgExpand.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgFFT.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\xTargetButton.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ui\DlgBase.h">
+      <Filter>image\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="image\image_document.h">
+      <Filter>image</Filter>
+    </ClInclude>
+    <ClInclude Include="image\image_view.h">
+      <Filter>image</Filter>
+    </ClInclude>
+    <ClInclude Include="image\common\BCMenu.h">
+      <Filter>image\common</Filter>
+    </ClInclude>
+    <ClInclude Include="image\common\memdc.h">
+      <Filter>image\common</Filter>
+    </ClInclude>
+    <ClInclude Include="image\common\quantize.h">
+      <Filter>image\common</Filter>
+    </ClInclude>
+    <ClInclude Include="image\common\config_manager.h">
+      <Filter>image\common</Filter>
+    </ClInclude>
+    <ClInclude Include="app\app_model.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="app\flow_model.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="app\image_model.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\splitter_ctrl.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ui\about_dialog.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\file_view.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\output_window.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\properties_window.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\toolbox_ctrl.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\toolbox_window.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\view_tree.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\child_frame.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\main_frame.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="precompile\precompile.cc">
+      <Filter>precompile</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\thumbnail_view.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\widget_manager.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="io\flow_factory.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\tixml_dom.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\command_window.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\abstract_connector.cc">
+      <Filter>flow\common</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\abstract_figure.cc">
+      <Filter>flow\common</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\abstract_handle.cc">
+      <Filter>flow\common</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\abstract_tool.cc">
+      <Filter>flow\common</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\abstract_view.cc">
+      <Filter>flow\common</Filter>
+    </ClCompile>
+    <ClCompile Include="base\observer.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\framework.cc">
+      <Filter>flow\common</Filter>
+    </ClCompile>
+    <ClCompile Include="io\serialize_const.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="base\constants.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\string.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\prefs_const.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="app\app.cc">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\grid.cc">
+      <Filter>flow\common</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\change_connection_end_handle.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\change_connection_handle.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\change_connection_start_handle.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\connection_tool.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\creation_tool.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\data_line.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\delegation_selection_tool.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\drag_tracker.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\drawing_container.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\handle_tracker.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\inout_port.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\node_figure.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\process_figure.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\selection_area_tracker.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\selection_tool.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\ui\flow_document.cc">
+      <Filter>flow\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\ui\flow_view.cc">
+      <Filter>flow\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\bezier_figure.cpp">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\abstract_connection.cc">
+      <Filter>flow\common</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\line_figure.cpp">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\geometry.cc">
+      <Filter>flow</Filter>
+    </ClCompile>
+    <ClCompile Include="flow\ui\auto_layout.cpp">
+      <Filter>flow\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="app\edit_manager.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgGamma.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgHisto.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgIncBpp.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgJpeg.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgMix.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgOpacity.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgOptions.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgPalette.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgRepair.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgResample.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgRotate.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgShadow.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgSkew.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgText.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgThreshold.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\dlgcapture.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgColorize.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgCombine.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgCustomFilter.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgDataExt.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgDecBpp.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgDither.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgExpand.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgFFT.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgFloodFill.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\xTargetButton.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\ui\DlgBase.cpp">
+      <Filter>image\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="image\image_document.cpp">
+      <Filter>image</Filter>
+    </ClCompile>
+    <ClCompile Include="image\image_view.cpp">
+      <Filter>image</Filter>
+    </ClCompile>
+    <ClCompile Include="image\common\BCMenu.cpp">
+      <Filter>image\common</Filter>
+    </ClCompile>
+    <ClCompile Include="image\common\quantize.cpp">
+      <Filter>image\common</Filter>
+    </ClCompile>
+    <ClCompile Include="image\common\config_manager.cpp">
+      <Filter>image\common</Filter>
+    </ClCompile>
+    <ClCompile Include="app\app_model.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="app\flow_model.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="app\image_model.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\splitter_ctrl.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DIP System.rc">
+      <Filter>res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

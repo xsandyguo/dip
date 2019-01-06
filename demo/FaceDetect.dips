@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<design>
+    <drawing>
+        <process id="0" x="369" y="146">
+            <filter class="{D95DB2D9-933A-4539-B006-4E94E85D71B9}">
+                <property>
+                    <item key="name" value="FaceDetect1" />
+                </property>
+            </filter>
+            <ports>
+                <port id="1" index="0" can_start="0">
+                    <owner>
+                        <process ref="0" />
+                    </owner>
+                </port>
+                <port id="2" index="0" can_start="1">
+                    <owner>
+                        <process ref="0" />
+                    </owner>
+                </port>
+            </ports>
+        </process>
+        <process id="3" x="185" y="134">
+            <filter class="{4661463D-82E4-4F20-98A6-AA268AD33DF4}">
+                <property>
+                    <item key="camera index" value="0" />
+                    <item key="name" value="CameraCaputre1" />
+                </property>
+            </filter>
+            <ports>
+                <port id="4" index="0" can_start="1">
+                    <owner>
+                        <process ref="3" />
+                    </owner>
+                </port>
+            </ports>
+        </process>
+        <process id="5" x="527" y="143">
+            <filter class="{c69f2646-5bf6-4cb0-a382-450aed4ad346}">
+                <property>
+                    <item key="display mode" value="image fit window" />
+                    <item key="height" value="400" />
+                    <item key="refresh rate" value="40" />
+                    <item key="stop_render_if_no_data" value="true" />
+                    <item key="width" value="300" />
+                    <item key="name" value="OcvWindow1" />
+                </property>
+            </filter>
+            <ports>
+                <port id="6" index="0" can_start="0">
+                    <owner>
+                        <process ref="5" />
+                    </owner>
+                </port>
+                <port id="7" index="0" can_start="1">
+                    <owner>
+                        <process ref="5" />
+                    </owner>
+                </port>
+            </ports>
+        </process>
+        <process id="8" x="718" y="193">
+            <filter class="{AA29A9AA-2431-4DA3-9E0C-F9FE4060CA33}">
+                <property>
+                    <item key="name" value="MessageThread1" />
+                </property>
+            </filter>
+            <ports>
+                <port id="9" index="0" can_start="0">
+                    <owner>
+                        <process ref="8" />
+                    </owner>
+                </port>
+            </ports>
+        </process>
+        <line id="10">
+            <start>
+                <port ref="4" />
+            </start>
+            <end>
+                <port ref="1" />
+            </end>
+        </line>
+        <line id="11">
+            <start>
+                <port ref="2" />
+            </start>
+            <end>
+                <port ref="6" />
+            </end>
+        </line>
+        <line id="12">
+            <start>
+                <port ref="7" />
+            </start>
+            <end>
+                <port ref="9" />
+            </end>
+        </line>
+    </drawing>
+</design>

@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0B5E3C50-8829-4B8C-94D1-D293971CB56B}</ProjectGuid>
+    <RootNamespace>DIPSystem</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <ProjectName>system</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\common.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\common.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(SolutionDir)runtime\include;$(IncludePath)</IncludePath>
+    <TargetName>dip</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(SolutionDir)DipRuntime\include;$(IncludePath)</IncludePath>
+    <TargetName>dip</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;DEBUG;STRSAFE_NO_DEPRECATE;TIXML_USE_STL;_WIN32_WINNT=0x601;_AFX_ALL_WARNINGS;_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES=1;_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES=1;_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT=1;_AFX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PrecompiledHeaderFile>precompile.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>precompile.h</ForcedIncludeFiles>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>$(SolutionDir)\third_party\OGDF\;$(SolutionDir)\third_party\CxImage;$(SolutionDir)\third_party\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ogdf.lib;Psapi.lib;tinyxml.lib;cximage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\build\$(Configuration)\</AdditionalLibraryDirectories>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;_AFX;STRSAFE_NO_DEPRECATE;_WIN32_WINNT=0x601;_AFX_ALL_WARNINGS;_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES=1;_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES=1;_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>precompile.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>precompile.h</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(SolutionDir)\third_party\OGDF\;$(SolutionDir)\third_party\CxImage;$(SolutionDir)\third_party\;$(SolutionDir)runtime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ogdf.lib;Psapi.lib;tinyxml.lib;cximage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\build\$(Configuration)\</AdditionalLibraryDirectories>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="DIP System.reg" />
+    <None Include="res\aligin.bmp" />
+    <None Include="res\aligin_hc.bmp" />
+    <None Include="res\aligin_small.bmp" />
+    <None Include="res\b1.ico" />
+    <None Include="res\bitmap2.bmp" />
+    <None Include="res\buttons.bmp" />
+    <None Include="res\canc.ico" />
+    <None Include="res\classview.bmp" />
+    <None Include="res\classview_hc.bmp" />
+    <None Include="res\class_view.ico" />
+    <None Include="res\class_view_hc.ico" />
+    <None Include="res\cximage.bmp" />
+    <None Include="res\cxtoolbar1.bmp" />
+    <None Include="res\cxtoolbar2.bmp" />
+    <None Include="res\demoDoc.ico" />
+    <None Include="res\DIP System.ico" />
+    <None Include="res\DIP SystemDoc.ico" />
+    <None Include="res\DIPSystem.rc2" />
+    <None Include="res\explorer.bmp" />
+    <None Include="res\explorer_hc.bmp" />
+    <None Include="res\filelarge.bmp" />
+    <None Include="res\filesmall.bmp" />
+    <None Include="res\fileview.bmp" />
+    <None Include="res\fileview_hc.bmp" />
+    <None Include="res\file_view.ico" />
+    <None Include="res\file_view_hc.ico" />
+    <None Include="res\gray.ico" />
+    <None Include="res\info.bmp" />
+    <None Include="res\main.bmp" />
+    <None Include="res\menuimages.bmp" />
+    <None Include="res\menuimages_hc.bmp" />
+    <None Include="res\no1.ico" />
+    <None Include="res\ok.ico" />
+    <None Include="res\output_wnd.ico" />
+    <None Include="res\output_wnd_hc.ico" />
+    <None Include="res\properties.bmp" />
+    <None Include="res\properties_hc.bmp" />
+    <None Include="res\properties_wnd.ico" />
+    <None Include="res\properties_wnd_hc.ico" />
+    <None Include="res\r1.ico" />
+    <None Include="res\ribbon.mfcribbon-ms" />
+    <None Include="res\sort.bmp" />
+    <None Include="res\sort_hc.bmp" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="res\Toolbar256.bmp" />
+    <None Include="Res\toolbox_wnd_hc.ico" />
+    <None Include="res\writelarge.bmp" />
+    <None Include="res\writesmall.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="app\app_model.h" />
+    <ClInclude Include="app\edit_manager.h" />
+    <ClInclude Include="app\flow_model.h" />
+    <ClInclude Include="base\observer.h" />
+    <ClInclude Include="base\string.h" />
+    <ClInclude Include="base\constants.h" />
+    <ClInclude Include="flow\bezier_figure.h" />
+    <ClInclude Include="flow\data_line.h" />
+    <ClInclude Include="flow\geometry.h" />
+    <ClInclude Include="flow\line_figure.h" />
+    <ClInclude Include="flow\ui\auto_layout.h" />
+    <ClInclude Include="flow\ui\flow_document.h" />
+    <ClInclude Include="flow\ui\flow_view.h" />
+    <ClInclude Include="framework\grid.h" />
+    <ClInclude Include="framework\abstract_connection.h" />
+    <ClInclude Include="image\common\BCMenu.h" />
+    <ClInclude Include="image\common\config_manager.h" />
+    <ClInclude Include="app\image_model.h" />
+    <ClInclude Include="image\image_document.h" />
+    <ClInclude Include="image\image_view.h" />
+    <ClInclude Include="image\common\memdc.h" />
+    <ClInclude Include="image\common\quantize.h" />
+    <ClInclude Include="image\ui\DlgBase.h" />
+    <ClInclude Include="image\ui\dlgcapture.h" />
+    <ClInclude Include="image\ui\DlgColorize.h" />
+    <ClInclude Include="image\ui\DlgCombine.h" />
+    <ClInclude Include="image\ui\DlgCustomFilter.h" />
+    <ClInclude Include="image\ui\DlgDataExt.h" />
+    <ClInclude Include="image\ui\DlgDecBpp.h" />
+    <ClInclude Include="image\ui\DlgDither.h" />
+    <ClInclude Include="image\ui\DlgExpand.h" />
+    <ClInclude Include="image\ui\DlgFFT.h" />
+    <ClInclude Include="image\ui\DlgFloodFill.h" />
+    <ClInclude Include="image\ui\DlgGamma.h" />
+    <ClInclude Include="image\ui\DlgHisto.h" />
+    <ClInclude Include="image\ui\DlgIncBpp.h" />
+    <ClInclude Include="image\ui\DlgJpeg.h" />
+    <ClInclude Include="image\ui\DlgMix.h" />
+    <ClInclude Include="image\ui\DlgOpacity.h" />
+    <ClInclude Include="image\ui\DlgOptions.h" />
+    <ClInclude Include="image\ui\DlgPalette.h" />
+    <ClInclude Include="image\ui\DlgRepair.h" />
+    <ClInclude Include="image\ui\DlgResample.h" />
+    <ClInclude Include="image\ui\DlgRotate.h" />
+    <ClInclude Include="image\ui\DlgShadow.h" />
+    <ClInclude Include="image\ui\DlgSkew.h" />
+    <ClInclude Include="image\ui\DlgText.h" />
+    <ClInclude Include="image\ui\DlgThreshold.h" />
+    <ClInclude Include="image\ui\xTargetButton.h" />
+    <ClInclude Include="io\serialize_const.h" />
+    <ClInclude Include="io\factory.h" />
+    <ClInclude Include="ui\splitter_ctrl.h" />
+    <ClInclude Include="ui\widget_manager.h" />
+    <ClInclude Include="flow\process_figure.h" />
+    <ClInclude Include="base\prefs_const.h" />
+    <ClInclude Include="io\flow_factory.h" />
+    <ClInclude Include="ui\about_dialog.h" />
+    <ClInclude Include="flow\node_figure.h" />
+    <ClInclude Include="flow\connection_tool.h" />
+    <ClInclude Include="framework\abstract_connector.h" />
+    <ClInclude Include="flow\change_connection_end_handle.h" />
+    <ClInclude Include="flow\change_connection_start_handle.h" />
+    <ClInclude Include="flow\inout_port.h" />
+    <ClInclude Include="flow\change_connection_handle.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ui\command_window.h" />
+    <ClInclude Include="ui\toolbox_ctrl.h" />
+    <ClInclude Include="ui\toolbox_window.h" />
+    <ClInclude Include="ui\child_frame.h" />
+    <ClInclude Include="ui\thumbnail_view.h" />
+    <ClInclude Include="app\app.h" />
+    <ClInclude Include="ui\file_view.h" />
+    <ClInclude Include="framework\abstract_figure.h" />
+    <ClInclude Include="framework\abstract_view.h" />
+    <ClInclude Include="framework\abstract_handle.h" />
+    <ClInclude Include="framework\abstract_tool.h" />
+    <ClInclude Include="flow\creation_tool.h" />
+    <ClInclude Include="flow\drag_tracker.h" />
+    <ClInclude Include="flow\handle_tracker.h" />
+    <ClInclude Include="flow\selection_area_tracker.h" />
+    <ClInclude Include="flow\delegation_selection_tool.h" />
+    <ClInclude Include="flow\drawing_container.h" />
+    <ClInclude Include="framework\framework.h" />
+    <ClInclude Include="flow\selection_tool.h" />
+    <ClInclude Include="ui\main_frame.h" />
+    <ClInclude Include="ui\output_window.h" />
+    <ClInclude Include="ui\properties_window.h" />
+    <ClInclude Include="precompile\precompile.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="ui\view_tree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="app\app_model.cpp" />
+    <ClCompile Include="app\edit_manager.cpp" />
+    <ClCompile Include="app\flow_model.cpp" />
+    <ClCompile Include="base\constants.cpp" />
+    <ClCompile Include="base\observer.cc" />
+    <ClCompile Include="base\string.cpp" />
+    <ClCompile Include="flow\bezier_figure.cpp" />
+    <ClCompile Include="flow\data_line.cc" />
+    <ClCompile Include="flow\geometry.cc" />
+    <ClCompile Include="flow\line_figure.cpp" />
+    <ClCompile Include="flow\ui\auto_layout.cpp" />
+    <ClCompile Include="flow\ui\flow_document.cc" />
+    <ClCompile Include="flow\ui\flow_view.cc" />
+    <ClCompile Include="framework\grid.cc" />
+    <ClCompile Include="framework\abstract_connection.cc" />
+    <ClCompile Include="image\common\BCMenu.cpp" />
+    <ClCompile Include="image\common\config_manager.cpp" />
+    <ClCompile Include="app\image_model.cpp" />
+    <ClCompile Include="image\image_document.cpp" />
+    <ClCompile Include="image\image_view.cpp" />
+    <ClCompile Include="image\common\quantize.cpp" />
+    <ClCompile Include="image\ui\DlgBase.cpp" />
+    <ClCompile Include="image\ui\dlgcapture.cpp" />
+    <ClCompile Include="image\ui\DlgColorize.cpp" />
+    <ClCompile Include="image\ui\DlgCombine.cpp" />
+    <ClCompile Include="image\ui\DlgCustomFilter.cpp" />
+    <ClCompile Include="image\ui\DlgDataExt.cpp" />
+    <ClCompile Include="image\ui\DlgDecBpp.cpp" />
+    <ClCompile Include="image\ui\DlgDither.cpp" />
+    <ClCompile Include="image\ui\DlgExpand.cpp" />
+    <ClCompile Include="image\ui\DlgFFT.cpp" />
+    <ClCompile Include="image\ui\DlgFloodFill.cpp" />
+    <ClCompile Include="image\ui\DlgGamma.cpp" />
+    <ClCompile Include="image\ui\DlgHisto.cpp" />
+    <ClCompile Include="image\ui\DlgIncBpp.cpp" />
+    <ClCompile Include="image\ui\DlgJpeg.cpp" />
+    <ClCompile Include="image\ui\DlgMix.cpp" />
+    <ClCompile Include="image\ui\DlgOpacity.cpp" />
+    <ClCompile Include="image\ui\DlgOptions.cpp" />
+    <ClCompile Include="image\ui\DlgPalette.cpp" />
+    <ClCompile Include="image\ui\DlgRepair.cpp" />
+    <ClCompile Include="image\ui\DlgResample.cpp" />
+    <ClCompile Include="image\ui\DlgRotate.cpp" />
+    <ClCompile Include="image\ui\DlgShadow.cpp" />
+    <ClCompile Include="image\ui\DlgSkew.cpp" />
+    <ClCompile Include="image\ui\DlgText.cpp" />
+    <ClCompile Include="image\ui\DlgThreshold.cpp" />
+    <ClCompile Include="image\ui\xTargetButton.cpp" />
+    <ClCompile Include="io\serialize_const.cc" />
+    <ClCompile Include="framework\framework.cc" />
+    <ClCompile Include="io\tixml_dom.cc" />
+    <ClCompile Include="ui\command_window.cc" />
+    <ClCompile Include="ui\splitter_ctrl.cpp" />
+    <ClCompile Include="ui\widget_manager.cc" />
+    <ClCompile Include="flow\process_figure.cc" />
+    <ClCompile Include="base\prefs_const.cc" />
+    <ClCompile Include="io\flow_factory.cc" />
+    <ClCompile Include="ui\about_dialog.cc" />
+    <ClCompile Include="flow\node_figure.cc" />
+    <ClCompile Include="framework\abstract_connector.cc" />
+    <ClCompile Include="flow\change_connection_end_handle.cc" />
+    <ClCompile Include="flow\change_connection_start_handle.cc" />
+    <ClInclude Include="io\tixml_dom.h" />
+    <ClInclude Include="io\io_format.h" />
+    <ClCompile Include="ui\toolbox_ctrl.cc" />
+    <ClCompile Include="ui\toolbox_window.cc" />
+    <ClCompile Include="ui\child_frame.cc" />
+    <ClCompile Include="flow\inout_port.cc" />
+    <ClCompile Include="ui\thumbnail_view.cc" />
+    <ClCompile Include="flow\change_connection_handle.cc" />
+    <ClCompile Include="flow\connection_tool.cc" />
+    <ClCompile Include="app\app.cc" />
+    <ClCompile Include="ui\file_view.cc" />
+    <ClCompile Include="framework\abstract_figure.cc" />
+    <ClCompile Include="framework\abstract_view.cc" />
+    <ClCompile Include="framework\abstract_handle.cc" />
+    <ClCompile Include="framework\abstract_tool.cc" />
+    <ClCompile Include="flow\creation_tool.cc" />
+    <ClCompile Include="flow\drag_tracker.cc" />
+    <ClCompile Include="flow\handle_tracker.cc" />
+    <ClCompile Include="flow\selection_area_tracker.cc" />
+    <ClCompile Include="flow\delegation_selection_tool.cc" />
+    <ClCompile Include="flow\drawing_container.cc" />
+    <ClCompile Include="flow\selection_tool.cc" />
+    <ClCompile Include="ui\main_frame.cc" />
+    <ClCompile Include="ui\output_window.cc" />
+    <ClCompile Include="ui\properties_window.cc" />
+    <ClCompile Include="precompile\precompile.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ui\view_tree.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DIP System.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\runtime\runtime.vcxproj">
+      <Project>{4c364ad4-bcf5-4df2-a88c-dd2bbeb01784}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="DIP System.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
